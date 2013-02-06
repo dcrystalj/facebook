@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="PosiljanjeObvestilStoritev"
+	targetNamespace="http://www.fb.si/PosiljanjeObvestilStoritev"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.fb.si/PosiljanjeObvestilStoritev"
+	xmlns:tipi="http://www.fb.si/PosiljanjeObvestilStoritevSporocila"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<wsdl:types>
+		<xsd:schema targetNamespace="http://www.fb.si/PosiljanjeObvestilStoritev">
+			<xsd:import namespace="http://www.fb.si/PosiljanjeObvestilStoritevSporocila"
+				schemaLocation="PosiljanjeObvestilStoritevSporocila.xsd"></xsd:import>
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="posljiSporociloRequest">
+		<wsdl:part element="tipi:TipSporosilaRequest" name="posljiSporociloRequest" />
+	</wsdl:message>
+	<wsdl:message name="posljiSporociloResponse">
+		<wsdl:part element="tipi:TipSporocilaResponse" name="posljiSporociloResponse" />
+	</wsdl:message>
+	<wsdl:portType name="PosiljanjeObvestilStoritev">
+		<wsdl:operation name="posljiSporocilo">
+			<wsdl:input message="tns:posljiSporociloRequest" />
+			<wsdl:output message="tns:posljiSporociloResponse" />
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="PosiljanjeObvestilStoritevSOAP" type="tns:PosiljanjeObvestilStoritev">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="posljiSporocilo">
+			<soap:operation
+				soapAction="http://www.fb.si/PosiljanjeObvestilStoritev/posljiSporocilo" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="PosiljanjeObvestilStoritev">
+		<wsdl:port binding="tns:PosiljanjeObvestilStoritevSOAP"
+			name="PosiljanjeObvestilStoritevSOAP">
+			<soap:address location="http://www.example.org/" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

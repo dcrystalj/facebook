@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<connections:connections xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:connections="http://www.ibm.com/websphere/wdo/connections">
+  <connection id="projekt27">
+    <development xsi:type="connections:rsc-live-connection" id="projekt27_dev" name="projekt27"/>
+    <runtime xsi:type="connections:driver-manager-connection" auto-deploy="true" class-location="mysql-connector-java-5.1.0-bin.jar;C:\RADWorkspaces\workspace\mysql-connector-java-5.1.22-bin.jar" id="projekt27_runtime" class-name="com.mysql.jdbc.Driver" url="jdbc:mysql://storm.cloud.si/prpo12_projekt27" userid="projekt27"/>
+  </connection>
+</connections:connections>

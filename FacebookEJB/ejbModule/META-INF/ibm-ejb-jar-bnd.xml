@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ejb-jar-bnd
+        xmlns="http://websphere.ibm.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://websphere.ibm.com/xml/ns/javaee http://websphere.ibm.com/xml/ns/javaee/ibm-ejb-jar-bnd_1_1.xsd"
+        version="1.1">
+
+	<session name="UpravljalecObvestilBean">
+		<message-destination-ref 
+			name="code.beanEJB.UpravljalecObvestilBean/vrsta" 
+			binding-name="jms/NotificationsQueue" />
+		<resource-ref 
+			name="code.beanEJB.UpravljalecObvestilBean/tovarnaPovezav" 
+			binding-name="jms/FacebookCF" />
+	</session>
+	<message-driven name="NovoObvestiloMDB">
+		<jca-adapter activation-spec-binding-name="eis/NewNotification" />
+	</message-driven>
+	
+	<session name="PosiljanjeObvestilBean">
+     <resource-ref
+                  name="code.beanEJB.PosiljanjeObvestilBean/seja"
+                  binding-name="mail/FacebookMailSession" />
+	</session>
+</ejb-jar-bnd>

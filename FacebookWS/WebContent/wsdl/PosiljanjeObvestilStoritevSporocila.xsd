@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.fb.si/PosiljanjeObvestilStoritevSporocila"
+	xmlns:tns="http://www.fb.si/PosiljanjeObvestilStoritevSporocila"
+	elementFormDefault="qualified">
+
+	<complexType name="SporociloTip">
+		<simpleContent>
+			<extension base="string">
+				<attribute name="email"></attribute>
+				<attribute name="naslov"></attribute>
+				<attribute name="vsebina"></attribute>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<simpleType name="TipSporocilaResponseEnum">
+		<restriction base="string">
+			<enumeration value="OK" />
+			<enumeration value="Error" />
+		</restriction>
+	</simpleType>
+	
+	
+	<element name="TipSporocilaResponse" type="tns:TipSporocilaResponseEnum"></element>
+	
+
+	<element name="TipSporosilaRequest" type="tns:SporociloTip"></element>
+	
+</schema>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="FacebookEAR">
+        <wb-resource deploy-path="/" source-path="/" tag="defaultRootSource"/>
+        <dependent-module archiveName="Facebook.war" deploy-path="/" handle="module:/resource/Facebook/Facebook">
+            <dependent-object>Module_1351524163359</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="FacebookJPA.jar" deploy-path="/lib" handle="module:/resource/FacebookJPA/FacebookJPA">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="FacebookEJB.jar" deploy-path="/" handle="module:/resource/FacebookEJB/FacebookEJB">
+            <dependent-object>Module_1354566649601</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="FacebookEJBClient.jar" deploy-path="/" handle="module:/resource/FacebookEJBClient/FacebookEJBClient">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="VrstaPosiljatelj.jar" deploy-path="/" handle="module:/resource/VrstaPosiljatelj/VrstaPosiljatelj">
+            <dependent-object>Module_1355150858721</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="VrstaSprejemnik.jar" deploy-path="/" handle="module:/resource/VrstaSprejemnik/VrstaSprejemnik">
+            <dependent-object>Module_1355757492637</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="TemaPrejemnikFB1.jar" deploy-path="/" handle="module:/resource/TemaPrejemnikFB1/TemaPrejemnikFB1">
+            <dependent-object>Module_1356079280565</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="FacebookWS.war" deploy-path="/" handle="module:/resource/FacebookWS/FacebookWS">
+            <dependent-object>Module_1357568829697</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>

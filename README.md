@@ -12,3 +12,7 @@ Social network in javaEE, to demonstrate differenet javaEE technologies:
 * MDB (Message Driven Bean)
 * Java Mail API
 * WebService
+
+Copyright to: 
+* dcrystalj
+* urgas9
